@@ -1,0 +1,64 @@
+/* CSS untuk navbar penuh layar dengan warna latar belakang dan tinggi lebih kecil */
+.header_inner {
+    width: 100%;
+    background-color: #333; /* Ubah ke warna yang diinginkan */
+}
+
+.header_bottom {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Mengatur item ke kanan */
+    height: 50px; /* Sesuaikan nilai ini untuk membuat navbar lebih kecil */
+}
+
+.header_inner_left {
+    display: flex;
+    align-items: center;
+}
+
+.header_inner_right {
+    display: flex;
+    align-items: center;
+}
+
+.main_menu.drop_down.right,
+.mobile_menu {
+    width: 100%;
+    background-color: #686868; /* Ubah ke warna yang diinginkan */
+}
+
+.main_menu.drop_down.right ul,
+.mobile_menu ul {
+    width: 100%;
+    background-color: inherit;
+    display: flex;
+    justify-content: flex-end; /* Mengatur item menu ke kanan */
+}
+
+.main_menu.drop_down.right li,
+.mobile_menu li {
+    width: auto; /* Sesuaikan jika ingin item menu menyebar */
+}
+
+.main_menu.drop_down.right li a,
+.mobile_menu li a {
+    color: white; /* Sesuaikan warna teks untuk kontras yang lebih baik */
+    padding: 5px 10px; /* Kurangi padding untuk tinggi yang lebih kecil */
+    display: block;
+    line-height: 50px; /* Sesuaikan line-height agar sesuai dengan tinggi header_bottom */
+}
+
+.main_menu.drop_down.right li a:hover,
+.mobile_menu li a:hover {
+    background-color: #8f8a8a; /* Opsional: Ubah warna latar belakang saat hover */
+}
+
+.menu-item-has-children > a .q_menu_arrow,
+.menu-item-has-children > a .mobile_arrow {
+    color: #fff; /* Pastikan warna panah sesuai dengan warna teks */
+}
+
+
+

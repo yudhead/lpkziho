@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* Global Styles */
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif; /* Use Poppins font */
+  background-color: #f4f4f4;
+}
+
+
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  transition: all 0.3s;
+  background-color: rgb(84, 84, 84);
+  color: var(--white);
+  overflow-y: auto; /* Menambahkan scroll ke sidebar */
+  height: 100vh; /* Pastikan sidebar memenuhi tinggi layar */
+}
+
+.sidebar.active {
+  width: 80px;
+}
+
+.sidebar-header {
+  padding: 20px;
+  color: var(--white);
+  text-align: center;
+}
+
+
+.sidebar ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px; /* Reduced padding */
+  color: var(--white);
+  text-decoration: none;
+}
+
+.sidebar ul li a .icon {
+  margin-right: 10px;
+}
+
+
+.wrapper .sidebar h3{
+  font-size: 20px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
+.main-panel {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.navbar {
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.sidebar.active {
+    width: 250px;
+}
+
+
+  .content {
+    padding-left: 20px; /* Add padding to content when sidebar is collapsed */
+    transition: all 0.3s;
+  }
+
+  header {
+    padding-left: 20px; /* Adjust header padding when sidebar is collapsed */
+    transition: all 0.3s;
+  }
+
+  .navbar-toggler {
+    display: block; /* Ensure navbar toggler is visible on mobile */
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 250px;
+    padding-top: 20px;
+    background-color: #343a40; /* Adjust background color */
+    transition: all 0.3s;
+    transform: translateX(-100%);
+    overflow-y: auto;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: .5rem 1rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #fff;
+  }
+
+  .navbar-collapse.collapsing {
+    transition: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    width: 250px;
+  }
+}
+
+header {
+  background: #1abc9c;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #555;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.card {
+  margin: 20px 0;
+  display: flex;
+  width: 100%;
+}
+
+.card-header {
+  background-color: #030303;
+  color: white;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card-content .table {
+  width: 100%;
+}
+
+.form-group {
+  text-align: left;
+  font-size: 20px;
+}
+
+.table-header-bg {
+  background-color: #030303;
+}
+
+.box {
+  background-color: #fff;
+  box-shadow: 4px 4px 10px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.box h1 {
+  color: #000000;
+  font-family: "Century Gothic", sans-serif;
+  text-transform: uppercase;
+}
+
+.box h3 {
+  margin-top: 50px;
+}
+
+.garis {
+  border: 1px solid #000000;
+  margin: 10px 0;
+  width: 80%;
+}
+
+.no-blue-link {
+  color: #fff; /* Change this to the color you want, e.g., black */
+  text-decoration: none; /* Removes the underline */
+}
+
+.no-blue-link:hover {
+  color: #007bff; /* Optional: Change color on hover */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.form-check-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.form-check-label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+.form-check-label:hover .option-label,
+.form-check-input:checked + .form-check-label .option-label {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+.option-label {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+
+/* CSS for mobile devices */
+@media (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-collapse {
+    justify-content: start !important;
+  }
+  
+  .card-body {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 10px;
+  }
+  
+  .card-header span {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 15px;
+  }
+
+  .card-header h4 {
+    font-size: 15px;
+  }
+
+  .table thead th:nth-child(3),
+  .table tbody td:nth-child(3) {
+    display: none;
+  }
+
+  .btn-ujian {
+    font-size: 10px !important; /* Sesuaikan ukuran font sesuai keinginan Anda */
+    padding: 3px 8px !important; /* Sesuaikan padding jika diperlukan */
+}
+
+}
+
+
+
+
+
+
+
+/* materi admin & user */
+
+.header h1 {
+  font-family: "Century Gothic", sans-serif;
+}
+
+.show1 {
+  font-weight: bold;
+  font-family: "Century Gothic", sans-serif;
+  text-transform: uppercase;
+}
+
+.box {
+  font-family: "Century Gothic", sans-serif;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px;
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 30px;
+  width: 100%; /* Mengubah lebar menjadi 100% dari container */
+  margin: 0 auto; /* Mengatur margin kiri dan kanan menjadi auto untuk centering */
+  box-sizing: border-box; /* Memastikan padding dihitung dalam lebar elemen */
+}
+
+.box p{
+  margin-top: 30px;
+  font-weight: lighter;
+}
+.box h1{
+  font-weight: bold;
+
+}
+
+
+.garis {
+  border: none;
+  height: 2px;
+  margin: 10px 0;
+  width: 100%;
+  background-color: #ddd;
+}
+
+.containerxx {
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.card-listxx {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+  font-family: "Century Gothic", sans-serif;
+}
+
+.cardxx {
+  
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px;
+  overflow: hidden;
+  width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.card-headerxx {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.card-bodyxx {
+  
+  padding: 10px;
+}
+
+.card-bodyxx h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-bodyxx p {
+  margin: 0;
+  color: #666;
+}
+
+.card-footerxx {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  font-size: 14px;
+  color: #888;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.no-blue-link {
+  color: #000000; /* Change this to the color you want, e.g., black */
+  text-decoration: none; /* Removes the underline */
+}
+
+.no-blue-link:hover {
+  color: #007bff; /* Optional: Change color on hover */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+
+/* Media queries for responsive design */
+
+@media (max-width: 1200px) {
+  .cardxx {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cxcx{
+    display: none;
+  }
+
+  .cardxx {
+    width: 100%;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .input-group select, .input-group-append {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .box {
+    padding: 20px;
+  }
+  
+  .card-headerxx, .card-footerxx {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .card-footerxx {
+    align-items: flex-end;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header.show1 {
+      font-size: 1rem;
+  }
+
+  .containerxx {
+      padding: 10px;
+  }
+
+  .box {
+      padding: 15px;
+  }
+
+  .box h1 {
+      font-size: 1.2rem;
+  }
+
+  .box p {
+      font-size: 0.9rem;
+  }
+
+  .lead {
+      font-size: 1rem;
+  }
+
+  .btn {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header.show1 {
+      font-size: 0.9rem;
+  }
+
+  .containerxx {
+      padding: 5px;
+  }
+
+  .box {
+      padding: 10px;
+  }
+
+  .box h1 {
+      font-size: 1rem;
+  }
+
+  .box p {
+      font-size: 0.8rem;
+  }
+
+  .lead {
+      font-size: 0.9rem;
+  }
+
+  .btn {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+  }
+
+  .btn i {
+      margin-right: 3px;
+  }
+}

@@ -1,0 +1,26 @@
+
+
+.carousel-control{
+    width: 30%;
+}
+
+@media only screen and (max-width: 420px){.q_logo a{height: 42px !important;}.header_bottom {padding: 0 15px;}}
+
+
+.carousel-inner .slider_content .text h2{
+background-color: rgba(255, 255, 255, 0.4);
+}
+.carousel-inner .slider_content .text p{
+ background-color: rgba(255, 255, 255, 0.4);
+}
+
+.title title_on_bottom .has_background{
+display: none
+}
+
+/* Slider */
+@media only screen and (max-width: 480px) {
+#qode-home {
+height: 180px !important;
+}
+}

@@ -1,0 +1,239 @@
+/* Existing CSS */
+
+.content {
+    margin: 20px auto;
+    max-width: 800px;
+    background: #00000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 251, 251, 0);
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Ensure content stacks vertically */
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.title span {
+    color: #ffffff;
+}
+
+
+
+form {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%; /* Make the form take the full width */
+    max-width: 600px; /* Set a max width for the form */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form .full-width {
+    grid-column: 1 / -1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0; /* Remove margin-bottom from inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%; /* Ensure button takes full width */
+    box-sizing: border-box; /* Ensure button padding and border are included in width */
+    justify-self: center; /* Center the button */
+}
+
+button:hover {
+    background-color: #e94525;
+}
+
+.alert {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.text-danger {
+    color: #721c24;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    flex-direction: column; /* Ensure content stacks vertically */
+}
+
+
+
+/* Custom styles for specific inputs */
+.small-input-container {
+    display: contents;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Adjust gap as needed */
+}
+
+.footer-left {
+    flex: 1; /* Take up remaining space */
+    max-width: 50%; /* Adjust width as needed */
+}
+
+.footer-right {
+    flex: 1; /* Take up remaining space */
+    max-width: 50%; /* Adjust width as needed */
+}
+
+#map {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left, .footer-right {
+        max-width: 100%;
+    }
+}
+
+
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Memberikan jarak antar elemen form */
+        max-width: 600px; /* Membatasi lebar form */
+        margin: 0 auto; /* Memusatkan form di tengah halaman */
+    }
+
+    .form-group {
+        display: contents;
+        box-sizing: border-box;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+        font-weight: bold; /* Membuat label tebal untuk lebih jelas */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="file"],
+    .form-group select,
+    .form-group input[type="date"] {
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-group .text-danger {
+        margin-top: 5px;
+        font-size: 12px;
+        color: red;
+    }
+
+    .small-input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Memberikan jarak antar elemen dalam container */
+    }
+
+    .small-input-container .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .small-input-container label {
+        margin-bottom: 5px;
+    }
+
+    .small-input-container input[type="file"] {
+        width: 100%;
+    }
+
+    .small-input-container input[type="text"] {
+        order: 2;
+    }
+
+    .show-inputs .small-input-container input[type="text"] {
+        order: 3;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #e24304;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #e24304;
+    }
+
+

@@ -1,0 +1,112 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #28a745 !important;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.container {
+    max-width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.timer-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+.timer-box h2 {
+    font-size: 2.5rem;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #28a745;
+    color: white;
+}
+
+.card-body {
+    background-color: white;
+}
+
+.soal-container {
+    margin-bottom: 20px;
+}
+
+.soal-container label {
+    font-weight: bold;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.card-header h4 {
+    text-align: center;
+}
+
+.custom-radio .form-check-input {
+    display: none;
+}
+
+.custom-radio .form-check-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    line-height: 1.5; /* Menambah jarak antar teks */
+}
+
+.custom-radio .form-check-label::before {
+    content: attr(data-option);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Lebar tetap untuk lingkaran */
+    height: 30px; /* Tinggi tetap untuk lingkaran */
+    border: 2px solid #000000; /* Warna border */
+    border-radius: 50%; /* Membuatnya menjadi lingkaran */
+    background-color: #fff;
+    margin-right: 10px;
+    margin-left: -20px;
+    flex-shrink: 0; /* Pastikan lingkaran tidak menyusut */
+    text-align: center; /* Pusatkan teks dalam lingkaran */
+    vertical-align: middle;
+    line-height: 30px; /* Tinggi teks dalam lingkaran */
+}
+
+.custom-radio .form-check-input:checked + .form-check-label::before {
+    background-color: #007bff;
+    border-color: #000000;
+    color: white;
+}
